@@ -310,6 +310,14 @@
                 mso-hide: all;      /* Outlook clients*/
                 overflow: hidden;   /* Generic */
             }
+
+            /* hide on large- tr */
+            .hide_large_tr {
+                max-height: 0;      /* Gmail*/
+                display: none;      /* Generic*/
+                mso-hide: all;      /* Outlook clients*/
+                overflow: hidden;   /* Generic */
+            }
         }
 
         /* 480 below */
@@ -336,6 +344,14 @@
                 overflow: auto !important;
                 max-height: inherit !important;
             }
+
+            /* show on small */
+            .hide_large_tr {
+                display: table-row !important;
+                width: auto !important;
+                overflow: auto !important;
+                max-height: inherit !important;
+            }
         }
     </style>
     <!-- MEDIA QUERY: END -->
@@ -350,60 +366,67 @@
         [data-ogsc] .dark-hide{ max-height: 0; display: none; mso-hide: all; overflow: hidden; }
         
         /** STANDARD **/
-        .dark-body-bg {                         background-color: #efefef !important; }
-        [data-ogsc] .dark-body-bg{              background-color: #efefef !important; }
+        .dark-body-bg {                                     background-color: #efefef !important; }
+        [data-ogsc] .dark-body-bg{                          background-color: #efefef !important; }
 
-        .dark-mode-subbg{                       background-color: #efefef !important; }
-        [data-ogsc] .dark-mode-subbg{           background-color: #efefef !important; }
+        .dark-mode-subbg{                                   background-color: #efefef !important; }
+        [data-ogsc] .dark-mode-subbg{                       background-color: #efefef !important; }
 
-        .dark-mode-bg{                          background-color: #ffffff !important; }
-        [data-ogsc] .dark-mode-bg{              background-color: #ffffff !important; }
+        .dark-mode-bg{                                      background-color: #ffffff !important; }
+        [data-ogsc] .dark-mode-bg{                          background-color: #ffffff !important; }
         
-        .dark-mode-minitext{                    color: #484848 !important; }
-        [data-ogsc] .dark-mode-minitext{        color: #484848 !important; }
+        .dark-mode-minitext{                                color: #484848 !important; }
+        [data-ogsc] .dark-mode-minitext{                    color: #484848 !important; }
 
-        .dark-mode-minitext a{                  color: #484848 !important; }
-        [data-ogsc] .dark-mode-minitext a{      color: #484848 !important; }
+        .dark-mode-minitext a{                              color: #484848 !important; }
+        [data-ogsc] .dark-mode-minitext a{                  color: #484848 !important; }
 
-        .dark-mode-titletext{                   color: #1f1f1f !important; }
-        [data-ogsc] .dark-mode-titletext{       color: #1f1f1f !important; }
+        .dark-mode-titletext{                               color: #1f1f1f !important; }
+        [data-ogsc] .dark-mode-titletext{                   color: #1f1f1f !important; }
 
-        .dark-mode-remarktext{                  color: #484848 !important; }
-        [data-ogsc] .dark-mode-remarktext{      color: #484848 !important; }
+        .dark-mode-remarktext{                              color: #484848 !important; }
+        [data-ogsc] .dark-mode-remarktext{                  color: #484848 !important; }
 
-        .dark-mode-button{                      color: #ffffff !important; background-color: #000000 !important; }
-        [data-ogsc] .dark-mode-button{          color: #ffffff !important; background-color: #000000 !important; }
+        .dark-mode-secondary-text{                          color: #B9B9B9 !important; }
+        [data-ogsc] .dark-mode-secondary-text{              color: #B9B9B9 !important; }
 
-        .dark-mode-secondary-text{              color: #B9B9B9 !important; }
-        [data-ogsc] .dark-mode-secondary-text{  color: #B9B9B9 !important; }
+        .dark-mode-secondary-text a{                        color: #B9B9B9 !important; }
+        [data-ogsc] .dark-mode-secondary-text a{            color: #B9B9B9 !important; }
 
-        .dark-mode-secondary-text a{            color: #B9B9B9 !important; }
-        [data-ogsc] .dark-mode-secondary-text a{color: #B9B9B9 !important; }
-
-        .dark-mode-whiteText {                  color: #ffffff !important; }
-        [data-ogsc] .dark-mode-whiteText {      color: #ffffff !important; }
-
+        .dark-mode-whiteText {                              color: #ffffff !important; }
+        [data-ogsc] .dark-mode-whiteText {                  color: #ffffff !important; }
+        
         /** BC Dark Gold **/
-        .dark-mode-property-secondary-theme{    background-color: #C4A441  !important; }
-        [data-ogsc] .dark-mode-property-secondary-theme { background-color: #C4A441  !important; }
-
-        /** BC Indigo **/
-        .dark-mode-bar{                         background-color: #01042D !important; }
-        [data-ogsc] .dark-mode-bar {            background-color: #01042D !important; }
+        .dark-mode-property-secondary-theme{                background-color: #C4A441  !important; }
+        [data-ogsc] .dark-mode-property-secondary-theme {   background-color: #C4A441  !important; }
         
-        .dark-mode-footerbackground{            background-color: #01042D !important;}
-        [data-ogsc] .dark-mode-footerbackground{background-color: #01042D !important;}
-
+        /** BC Indigo **/
+        .dark-mode-bar{                                     background-color: #01042D !important; }
+        [data-ogsc] .dark-mode-bar {                        background-color: #01042D !important; }
+        
+        .dark-mode-footerbackground{                        background-color: #01042D !important;}
+        [data-ogsc] .dark-mode-footerbackground{            background-color: #01042D !important;}
+        
         /** BC Dark Blue **/
-        .dark-mode-divider{                     background-color: #081F3F !important; }
-        [data-ogsc] .dark-mode-divider{         background-color: #081F3F !important; }
+        .dark-mode-divider{                                 background-color: #081F3F !important; }
+        [data-ogsc] .dark-mode-divider{                     background-color: #081F3F !important; }
+        
+        /** BC Dark Blue **/
+        .dark-mode-button{                                  color: #ffffff !important; background-color: #081F3F !important; }
+        [data-ogsc] .dark-mode-button{                      color: #ffffff !important; background-color: #081F3F !important; }
 
+        .dark-mode-ghostbutton-text{                        color: #081F3F !important; }
+        [data-ogsc] .dark-mode-ghostbutton-text{            color: #081F3F !important; }
+
+        .dark-mode-ghostbutton-border{                      border: 1px solid #081F3F !important; }
+        [data-ogsc] .dark-mode-ghostbutton-border{          border: 1px solid #081F3F !important; }
+        
     </style>
     <!-- LIGHT MODE -->
 
     <!-- DARK MODE: BEGIN -->
     <style type="text/css">
-        @media (prefers-color-scheme: dark ) {
+        @media (prefers-color-scheme: dark ) { 
 
             .light-show{ max-height: 0; display: none; mso-hide: all; overflow: hidden; }
             [data-ogsc] .light-show{ max-height: 0; display: none; mso-hide: all; overflow: hidden; }
@@ -411,50 +434,62 @@
             .dark-hide{ display: table-row; }
             [data-ogsc] .dark-hide{ display: table-row; }
             
-            .dark-body-bg {                             background-color: #efefef !important; }
-            [data-ogsc] .dark-body-bg{                  background-color: #efefef !important; }
+            /** STANDARD **/
+            .dark-body-bg {                                     background-color: #191818 !important; }
+            [data-ogsc] .dark-body-bg{                          background-color: #191818 !important; }
 
-            .dark-mode-subbg{                           background-color: #003253 !important; }
-            [data-ogsc] .dark-mode-subbg{               background-color: #003253 !important; }
+            .dark-mode-subbg{                                   background-color: #191818 !important; }
+            [data-ogsc] .dark-mode-subbg{                       background-color: #191818 !important; }
 
-            .dark-mode-bg{                              background-color: #001B2E !important; }
-            [data-ogsc] .dark-mode-bg{                  background-color: #001B2E !important; }
+            .dark-mode-bg{                                      background-color: #191818 !important; }
+            [data-ogsc] .dark-mode-bg{                          background-color: #191818 !important; }
+
+            .dark-mode-minitext{                                color: #B9B9B9 !important; }
+            [data-ogsc] .dark-mode-minitext{                    color: #B9B9B9 !important; }
+
+            .dark-mode-minitext a{                              color: #B9B9B9 !important; }
+            [data-ogsc] .dark-mode-minitext a{                  color: #B9B9B9 !important; }
+
+            .dark-mode-titletext{                               color: #ffffff !important; }
+            [data-ogsc] .dark-mode-titletext{                   color: #ffffff !important; }
+
+            .dark-mode-remarktext{                              color: #B9B9B9 !important; }
+            [data-ogsc] .dark-mode-remarktext{                  color: #B9B9B9 !important; }
+
+            .dark-mode-secondary-text{                          color: #B9B9B9 !important; }
+            [data-ogsc] .dark-mode-secondary-text{              color: #B9B9B9 !important; }
             
-            .dark-mode-bar {                            background-color: #003253 !important; }
-            [data-ogsc] .dark-mode-bar {                background-color: #003253 !important; }
+            .dark-mode-secondary-text a{                        color: #B9B9B9 !important; }
+            [data-ogsc] .dark-mode-secondary-text a{            color: #B9B9B9 !important; }
 
-            .dark-mode-minitext{                        color: #B9B9B9 !important; }
-            [data-ogsc] .dark-mode-minitext{            color: #B9B9B9 !important; }
-
-            .dark-mode-minitext a{                      color: #B9B9B9 !important; }
-            [data-ogsc] .dark-mode-minitext a{          color: #B9B9B9 !important; }
-
-            .dark-mode-titletext{                       color: #ffffff !important; }
-            [data-ogsc] .dark-mode-titletext{           color: #ffffff !important; }
-
-            .dark-mode-remarktext{                      color: #B9B9B9 !important; }
-            [data-ogsc] .dark-mode-remarktext{          color: #B9B9B9 !important; }
-
-            .dark-mode-button{                          background-color: #0071BC !important; color: #ffffff !important; }
-            [data-ogsc] .dark-mode-button{              background-color: #0071BC !important; color: #ffffff !important; }
-
-            .dark-mode-secondary-text{                  color: #B9B9B9 !important; }
-            [data-ogsc] .dark-mode-secondary-text{      color: #B9B9B9 !important; }
+            .dark-mode-whiteText {                              color: #ffffff !important; }
+            [data-ogsc] .dark-mode-whiteText {                  color: #ffffff !important; }
             
-            .dark-mode-secondary-text a{                color: #B9B9B9 !important; }
-            [data-ogsc] .dark-mode-secondary-text a{    color: #B9B9B9 !important; }
+            /**  **/
+            .dark-mode-property-secondary-theme{                background-color: #C4A441 !important; }
+            [data-ogsc] .dark-mode-property-secondary-theme {   background-color: #C4A441 !important; }
 
-            .dark-mode-whiteText {                      color: #ffffff !important; }
-            [data-ogsc] .dark-mode-whiteText {          color: #ffffff !important; }
+            /**  **/
+            .dark-mode-bar {                                    background-color: #C4A441 !important; }
+            [data-ogsc] .dark-mode-bar {                        background-color: #C4A441 !important; } 
 
-            .dark-mode-property-secondary-theme{        background-color: #0071BC !important; }
-            [data-ogsc] .dark-mode-property-secondary-theme { background-color: #0071BC !important; }
+            .dark-mode-footerbackground{                        background-color: #081F3F !important;}
+            [data-ogsc] .dark-mode-footerbackground{            background-color: #081F3F !important;}
 
-            .dark-mode-footerbackground{                background-color: #00121e !important;}
-            [data-ogsc] .dark-mode-footerbackground{    background-color: #00121e !important;}
-            
-            .dark-mode-divider{                         background-color: #003253 !important; }
-            [data-ogsc] .dark-mode-divider{             background-color: #003253 !important; }
+            /**  **/
+            .dark-mode-divider{                                 background-color: #003253 !important; }
+            [data-ogsc] .dark-mode-divider{                     background-color: #003253 !important; }
+                       
+            /** **/
+            .dark-mode-button{                                  background-color: #C4A441 !important; color: #ffffff !important; }
+            [data-ogsc] .dark-mode-button{                      background-color: #C4A441 !important; color: #ffffff !important; }
+
+            .dark-mode-ghostbutton-text{                        color: #F5F0DD !important; }
+            [data-ogsc] .dark-mode-ghostbutton-text{            color: #F5F0DD !important; }
+    
+            .dark-mode-ghostbutton-border{                      border: 1px solid #F5F0DD !important; }
+            [data-ogsc] .dark-mode-ghostbutton-border{          border: 1px solid #F5F0DD !important; }
+    
         }
     </style>
     <!-- DARK MODE: END -->
@@ -532,78 +567,29 @@
 
                                     <tr id="bco_logo">
                                         <td width="100%" align="center" valign="middle">
-                                            <table 
-                                                role="presentation"
-                                                cellspacing="0" 
-                                                cellpadding="0"
-                                                width="100%"
-                                                border="0"
-                                                align="center"
-                                            >
+                                            <table role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center">
                                                 <tbody>
-
-                                                    <tr id="bco_logo">
+                                                    <tr>
                                                         <td width="100%" align="center" valign="middle" bgcolor="#ffffff">
-                                                            <table 
-                                                                role="presentation"
-                                                                cellspacing="0" 
-                                                                cellpadding="0"
-                                                                width="100%"
-                                                                border="0"
-                                                                align="center"
-                                                            >
+                                                            <table role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center">
                                                                 <tbody>
                                                                     <tr>
-                                                                    <td width="100%" align="center" valign="middle">
+                                                                        <td width="100%" align="center" valign="middle">
                                                                             <div>
-
-                                                                                <table
-                                                                                    role="presentation"
-                                                                                    cellspacing="0" 
-                                                                                    cellpadding="0"
-                                                                                    width="100%"
-                                                                                    border="0"
-                                                                                    align="center"
-                                                                                >
+                                                                                <table role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center">
                                                                                     <tbody>
                                                                                         <!--[if gte mso 9]>
                                                                                             <tr id="header" class="light-show">
                                                                                                 <td class="dark-mode-bg" width="100%" align="center" valign="middle" bgcolor="#ffffff" style="padding:0px;">
-                                                                                                    <table
-                                                                                                        class="table"
-                                                                                                        role="presentation"
-                                                                                                        role="presentation"
-                                                                                                        cellspacing="0" 
-                                                                                                        cellpadding="0" 
-                                                                                                        width="100%" 
-                                                                                                        border="0" 
-                                                                                                        align="center" 
-                                                                                                        style="max-width: 680px; background-color:inherit;" 
-                                                                                                    >
+                                                                                                    <table class="table" role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center" style="max-width: 680px; background-color:inherit;">
                                                                                                         <tbody>
                                                                                                             <tr>
                                                                                                                 <td align="center" valign="middle" style="padding: 25px 20px 25px 20px; background-color:inherit;">
-                                                                                                                    <table
-                                                                                                                        role="presentation"
-                                                                                                                        cellspacing="0" 
-                                                                                                                        cellpadding="0"
-                                                                                                                        width="100%"
-                                                                                                                        border="0"
-                                                                                                                        align="center"
-                                                                                                                        style="background-color: inherit;"
-                                                                                                                    >
+                                                                                                                    <table role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center" style="background-color: inherit;">
                                                                                                                         <tbody>
                                                                                                                             <tr>
                                                                                                                                 <td>
-                                                                                                                                    <table 
-                                                                                                                                        role="presentation"
-                                                                                                                                        cellspacing="0" 
-                                                                                                                                        cellpadding="0"
-                                                                                                                                        width="250"
-                                                                                                                                        border="0"
-                                                                                                                                        align="center"
-                                                                                                                                        style="background-color: inherit;"
-                                                                                                                                    >
+                                                                                                                                    <table role="presentation" cellspacing="0" cellpadding="0" width="250" border="0" align="center" style="background-color: inherit;">
                                                                                                                                         <tbody>
                                                                                                                                             <tr>
                                                                                                                                                 <td align="center" valign="middle" style="background-color: inherit;">
@@ -630,45 +616,18 @@
                                                                                                 </td>
                                                                                             </tr>
                                                                                         <![endif]-->
-
                                                                                         <![if !mso]>
                                                                                             <tr id="header" class="light-show">
                                                                                                 <td class="dark-mode-bg" width="100%" align="center" valign="middle" bgcolor="#ffffff" style="padding:0px;">
-                                                                                                    <table
-                                                                                                        class="table"
-                                                                                                        role="presentation"
-                                                                                                        role="presentation"
-                                                                                                        cellspacing="0" 
-                                                                                                        cellpadding="0" 
-                                                                                                        width="100%" 
-                                                                                                        border="0" 
-                                                                                                        align="center" 
-                                                                                                        style="max-width: 680px; background-color:inherit;" 
-                                                                                                    >
+                                                                                                    <table class="table" role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center" style="max-width: 680px; background-color:inherit;">
                                                                                                         <tbody>
                                                                                                             <tr>
-                                                                                                                <td align="center" valign="middle" style="padding: 25px 20px 25px 20px; background-color:inherit;">
-                                                                                                                    <table
-                                                                                                                        role="presentation"
-                                                                                                                        cellspacing="0" 
-                                                                                                                        cellpadding="0"
-                                                                                                                        width="100%"
-                                                                                                                        border="0"
-                                                                                                                        align="center"
-                                                                                                                        style="background-color: inherit;"
-                                                                                                                    >
+                                                                                                                <td align="center" valign="middle" style="padding: 25px 20px 25px 20px;">
+                                                                                                                    <table role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center">
                                                                                                                         <tbody>
                                                                                                                             <tr>
                                                                                                                                 <td>
-                                                                                                                                    <table 
-                                                                                                                                        role="presentation"
-                                                                                                                                        cellspacing="0" 
-                                                                                                                                        cellpadding="0"
-                                                                                                                                        width="250"
-                                                                                                                                        border="0"
-                                                                                                                                        align="center"
-                                                                                                                                        style="background-color: inherit;"
-                                                                                                                                    >
+                                                                                                                                    <table role="presentation" cellspacing="0" cellpadding="0" width="250" border="0" align="center">
                                                                                                                                         <tbody>
                                                                                                                                             <tr>
                                                                                                                                                 <td align="center" valign="middle" style="background-color: inherit;">
@@ -696,41 +655,15 @@
                                                                                             </tr>
                                                                                             <tr id="header_dark" class="dark-hide">
                                                                                                 <td class="dark-mode-bg" width="100%" align="center" valign="middle" bgcolor="#ffffff" style="padding:0px;">
-                                                                                                    <table
-                                                                                                        class="table"
-                                                                                                        role="presentation"
-                                                                                                        role="presentation"
-                                                                                                        cellspacing="0" 
-                                                                                                        cellpadding="0" 
-                                                                                                        width="100%" 
-                                                                                                        border="0" 
-                                                                                                        align="center" 
-                                                                                                        style="max-width: 680px; background-color: inherit;" 
-                                                                                                    >
+                                                                                                    <table class="table" role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center" style="max-width: 680px; background-color: inherit;">
                                                                                                         <tbody>
                                                                                                             <tr class="dark-hide">
-                                                                                                                <td align="center" valign="middle" style="padding: 25px 20px 25px 20px; background-color:inherit;">
-                                                                                                                    <table
-                                                                                                                        role="presentation"
-                                                                                                                        cellspacing="0" 
-                                                                                                                        cellpadding="0"
-                                                                                                                        width="100%"
-                                                                                                                        border="0"
-                                                                                                                        align="center"
-                                                                                                                        style="background-color: inherit;" 
-                                                                                                                    >
+                                                                                                                <td align="center" valign="middle" style="padding: 25px 20px 25px 20px;">
+                                                                                                                    <table role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center">
                                                                                                                         <tbody>
                                                                                                                             <tr class="dark-hide">
                                                                                                                                 <td>
-                                                                                                                                    <table 
-                                                                                                                                        role="presentation"
-                                                                                                                                        cellspacing="0" 
-                                                                                                                                        cellpadding="0"
-                                                                                                                                        width="250"
-                                                                                                                                        border="0"
-                                                                                                                                        align="center"
-                                                                                                                                        style="background-color: inherit;"
-                                                                                                                                    >
+                                                                                                                                    <table role="presentation" cellspacing="0" cellpadding="0" width="250" border="0" align="center">
                                                                                                                                         <tbody>
                                                                                                                                             <tr class="dark-hide">
                                                                                                                                                 <td align="center" valign="middle" style="background-color: inherit;">
@@ -761,23 +694,22 @@
                                                                                 </table>
                                                                             
                                                                             </div>
-                                                                    </td>
+                                                                        </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
                                                         </td>
                                                     </tr>
-
                                                 </tbody>
                                             </table>
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="dark-mode-bar" width="100%" style="font-size:1px;padding-top:15px;background: #001753;">&nbsp;</td>
+                                    <tr class="BAR">
+                                        <td class="dark-mode-bar" width="100%" style="height:15px; background: #001753; font-size: 1px; line-height: 0;">&nbsp;</td>
                                     </tr>
 
-                                    <tr id="email_content">
+                                    <tr class="EMAILBODY_HOLDER">
                                         <td class="dark-mode-bg" width="100%" align="center" valign="middle" bgcolor="#ffffff">
                                             <table class="table" role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center" style="max-width: 680px; background-color: inherit;">
                                                 <tbody>
@@ -887,8 +819,8 @@
                                                     </tr>
                                                     <!-- HERO IMAGE: END -->
 
-                                                    <tr>
-                                                        <td class="dark-mode-bg" width="100%" align="center" valign="middle" style="padding-top: 20px; background-color: #ffffff; font-size: 1px;">&nbsp;</td>
+                                                    <tr class="BAR">
+                                                        <td class="dark-mode-bg" width="100%" align="center" valign="middle" style="height: 20px; background-color: #ffffff; font-size: 1px; line-height: 0;">&nbsp;</td>
                                                     </tr>
 
                                                     <tr>
@@ -897,8 +829,8 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td class="dark-mode-bg" align="center" valign="middle" bgcolor="#ffffff" style="padding: 0 20px; padding-bottom: 0; background-color: #ffffff;">
-                                                                            <div class="dark-mode-titletext" style="font-family: 'Helvetica', 'Arial', sans-serif;color: #000000;font-size: 24px;font-weight: 600;line-height: 29px;text-align: center;position: relative;">Reminder of Bonus Offers</div>
-                                                                            <div class="dark-mode-titletext" style="font-family: 'Helvetica', 'Arial', sans-serif;color: #000000;font-size: 26px;font-weight: 600;line-height: 29px;text-align: center;position: relative;">EXCLUSIVELY FOR YOU!</div>
+                                                                            <div class="dark-mode-titletext" style="font-family: 'Arial', sans-serif;color: #000000;font-size: 24px;font-weight: 600;line-height: 29px;text-align: center;position: relative;">Reminder of Bonus Offers</div>
+                                                                            <div class="dark-mode-titletext" style="font-family: 'Arial', sans-serif;color: #000000;font-size: 26px;font-weight: 600;line-height: 29px;text-align: center;position: relative;">EXCLUSIVELY FOR YOU!</div>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -920,39 +852,35 @@
                                                         </td>
                                                     </tr>
 
-                                                    <tr>
-                                                        <td class="dark-mode-bg" width="100%" align="center" valign="middle" bgcolor="#ffffff" style="background-color: #ffffff;">
-                                                            <table 
-                                                                role="presentation"
-                                                                cellspacing="0" 
-                                                                cellpadding="0"
-                                                                width="100%"
-                                                                border="0"
-                                                                align="center"
-                                                            >
+                                                    <tr class="CTA_BUTTON">
+                                                        <td width="100%" align="center" valign="middle">
+                                                            <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-radius:8px !important;">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td class="dark-mode-bg" width="100%" align="center" valign="middle" bgcolor="#ffffff" style="padding: 0 20px; padding-top: 0; background-color: #ffffff;">
-                                                                            <div style="text-align:center; mso-line-height-rule:exactly;">
-                                                                                <!--[if gte mso 9]>
-                                                                                <table border="0" cellspacing="0" cellpadding="0">
-                                                                                    <tr>
-                                                                                        <td align="center" bgcolor="#000000" style="border-radius: 5px;" valign="top">
-                                                                                <![endif]-->
-                                                                                <a 
-                                                                                    class="dark-mode-button"
-                                                                                    href="" 
-                                                                                    target="_blank" 
-                                                                                    style="background-color: #000000;display:inline-block;font-family: 'pp-sans-small-regular', Tahoma, Arial, sans-serif;font-size: 14px;font-weight:bold;color:#ffffff;text-align:center;text-decoration:none;border-radius: 5px;padding: 15px 30px;-webkit-text-size-adjust:none;" 
-                                                                                    title="View the offers"
-                                                                                    aria-label="Login to view your offers in a new window"
-                                                                                >VIEW YOUR OFFERS</a>
-                                                                                <!--[if gte mso 9]>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </table>
-                                                                                <![endif]-->                                                                
-                                                                            </div>
+                                                                        <td align="center" class="dark-mode-button" valign="middle" bgcolor="#000001" style="display: block;font-size: 14px;text-transform: uppercase;font-family: Arial, sans-serif;font-weight:bold;color:#ffffff;border-radius: 2px;text-align: center;padding: 15px 45px;">
+                                                                            <a href="/" target="_blank" style="text-decoration: none !important; color: #ffffff !important; margin: 0 auto !important; display: block; letter-spacing: 1px;">
+                                                                                <span style="text-decoration: none; color: #ffffff !important;">
+                                                                                    <font color="#ffffff">VIEW YOUR OFFERS</font>
+                                                                                </span>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+     
+                                                    <tr class="GHOST_CTA_BUTTON">
+                                                        <td width="100%" align="center" valign="middle" style="padding-top: 30px;">                            
+                                                            <table class="dark-mode-ghostbutton-border" cellpadding="0" cellspacing="0" border="0" style="border-radius:8px !important; border:1px solid #b0b0b0;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="dark-mode-ghostbutton-text" align="center" valign="middle" style="display: block;font-size: 14px;text-transform: uppercase;font-family: Arial, sans-serif;font-weight:bold;color:#000001;border-radius:8px;text-align: center;padding: 15px 45px;">
+                                                                            <a class="dark-mode-ghostbutton-text" href="/" target="_blank" style="text-decoration: none !important; color: #000001; margin: 0 auto !important; display: block; letter-spacing: 1px;">
+                                                                                <span class="dark-mode-ghostbutton-text" style="text-decoration: none; color: #000001;">
+                                                                                    <font>VIEW MY BENEFITS</font>
+                                                                                </span>
+                                                                            </a>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -960,8 +888,8 @@
                                                         </td>
                                                     </tr>
 
-                                                    <tr>
-                                                        <td class="dark-mode-bg" width="100%" align="center" valign="middle" style="padding-top: 40px; background-color: #ffffff; font-size: 1px;">&nbsp;</td>
+                                                    <tr class="BAR">
+                                                        <td class="dark-mode-bg" width="100%" align="center" valign="middle" style="height: 40px; background-color: #ffffff; font-size: 1px; line-height: 0;">&nbsp;</td>
                                                     </tr>
 
                                                 </tbody>
@@ -997,7 +925,7 @@
                                                                                                         </td>
                                                                                                     </tr>
 
-                                                                                                    <tr><td width="100%" align="center" valign="middle" bgcolor="#dddddd" style="padding-top: 1px; background-color: #dddddd; font-size: 1px;">&nbsp;</td></tr>
+                                                                                                    <tr class="LINE"><td width="100%" align="center" valign="middle" bgcolor="#dddddd" style="padding-top: 1px; background-color: #dddddd; font-size: 1px; line-height:0;">&nbsp;</td></tr>
                                                                                                     <tr>
                                                                                                         <td width="100%" align="center" valign="middle" style="padding: 30px;">
                                                                                                             <div>
@@ -1006,7 +934,7 @@
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                     
-                                                                                                    <tr><td width="100%" align="center" valign="middle" bgcolor="#dddddd" style="padding-top: 1px; background-color: #dddddd; font-size: 1px;">&nbsp;</td></tr>
+                                                                                                    <tr class="LINE"><td width="100%" align="center" valign="middle" bgcolor="#dddddd" style="padding-top: 1px; background-color: #dddddd; font-size: 1px; line-height:0;">&nbsp;</td></tr>
                                                                                                     <tr>
                                                                                                         <td width="100%" align="center" valign="middle" style="padding: 20px;">
                                                                                                             <div>
@@ -1025,12 +953,124 @@
                                                                     </tr>
                                                                     <!-- BGC MENU: END -->
 
+                                                                    <!-- QUICK ACTION -->
+                                                                    <tr id="QUICK_ACTION">
+                                                                        <td align="left" valign="middle" style="padding: 20px; background-color: #202020 !important;">
+                                                                            <table role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center">
+                                                                                <tbody>
+                                                                                    
+                                                                                    <tr>
+                                                                                        <td class="dark-mode-footerbackground" width="100%" align="center" valign="middle" style="background-color: #202020 !important;">
+                                                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <!-- Column : BEGIN -->
+                                                                                                        <th valign="top" width="33.33%" class="stack-column-center">
+                                                                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                                                                <tbody>
+                                                                                                                    <tr>
+                                                                                                                        <td width="100%" align="center" valign="middle" style="padding: 20px;">
+                                                                                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                                                                                <tbody>
+                                                                                                                                    <tr>
+                                                                                                                                        <td width="100%" align="center" valign="middle">
+                                                                                                                                            <a href="/" target="_blank" title="My Offers" aria-label="View My Offers">
+                                                                                                                                                <img src="http://image.email.boydgaming.net/lib/fe39157075640579711c74/m/12/cfe5e9c6-26a9-484b-8736-836341f29c45.png" alt="Contact Us" width="35" height="35" style="display:block; margin:auto; border-style: none;" title="Contact Us" border="0">
+                                                                                                                                            </a>
+                                                                                                                                        </td>
+                                                                                                                                    </tr>
+                                                                                                                                    <tr>
+                                                                                                                                        <td width="100%" align="center" valign="middle" style="padding-top: 15px;">
+                                                                                                                                            <a href="/" target="_blank" title="My Offers" aria-label="View My Offers">
+                                                                                                                                                <div class="dark-mode-secondary-text" style="margin: 0px;font-family: Arial, sans-serif;font-size: 18px;mso-line-height-rule:exactly;line-height:150%;color: #B9B9B9;">My Offers</div>
+                                                                                                                                            </a>
+                                                                                                                                        </td>
+                                                                                                                                    </tr>
+                                                                                                                                </tbody>
+                                                                                                                            </table>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                    <tr class="LINE hide_large_tr"><td width="100%" align="center" valign="middle" bgcolor="#dddddd" style="padding-top: 1px;background-color: #363636;font-size: 1px;line-height: 0;">&nbsp;</td></tr>
+                                                                                                                </tbody>
+                                                                                                            </table>
+                                                                                                        </th>
+
+                                                                                                        <th valign="top" width="33.33%" class="stack-column-center">
+                                                                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                                                                <tbody>
+                                                                                                                    <tr>
+                                                                                                                        <td width="100%" align="center" valign="middle" style="padding: 20px;">
+                                                                                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                                                                                <tbody>
+                                                                                                                                    <tr>
+                                                                                                                                        <td width="100%" align="center" valign="middle">
+                                                                                                                                            <a href="/" target="_blank" title="Get Direction" aria-label="Get Direction">
+                                                                                                                                                <img src="http://image.email.boydgaming.net/lib/fe39157075640579711c74/m/12/daf7169f-8dd2-4358-87d9-862e6031c605.png" alt="Contact Us" width="35" height="35" style="display:block; margin:auto; border-style: none;" title="Contact Us" border="0">
+                                                                                                                                            </a>
+                                                                                                                                        </td>
+                                                                                                                                    </tr>
+                                                                                                                                    <tr>
+                                                                                                                                        <td width="100%" align="center" valign="middle" style="padding-top: 15px;">
+                                                                                                                                            <a href="/" target="_blank" title="Get Direction" aria-label="Get Direction">
+                                                                                                                                                <div class="dark-mode-secondary-text" style="margin: 0px;font-family: Arial, sans-serif;font-size: 18px;mso-line-height-rule:exactly;line-height:150%;color: #B9B9B9;">Get Direction</div>
+                                                                                                                                            </a>
+                                                                                                                                        </td>
+                                                                                                                                    </tr>
+                                                                                                                                </tbody>
+                                                                                                                            </table>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                    <tr class="LINE hide_large_tr"><td width="100%" align="center" valign="middle" bgcolor="#dddddd" style="padding-top: 1px;background-color: #363636;font-size: 1px;line-height: 0;">&nbsp;</td></tr>
+                                                                                                                </tbody>
+                                                                                                            </table>
+                                                                                                        </th>
+
+                                                                                                        <th valign="top" width="33.33%" class="stack-column-center">
+                                                                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                                                                <tbody>
+                                                                                                                    <tr>
+                                                                                                                        <td width="100%" align="center" valign="middle" style="padding: 20px;">
+                                                                                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                                                                                <tbody>
+                                                                                                                                    <tr>
+                                                                                                                                        <td width="100%" align="center" valign="middle">
+                                                                                                                                            <a href="/" target="_blank" title="Contact Us" aria-label="Contact Us">
+                                                                                                                                                <img src="http://image.email.boydgaming.net/lib/fe39157075640579711c74/m/12/d476a1be-6ae5-4f6f-b7d6-0672675e832e.png" alt="Contact Us" width="35" height="35" style="display:block; margin:auto; border-style: none;" title="Contact Us" border="0">
+                                                                                                                                            </a>
+                                                                                                                                        </td>
+                                                                                                                                    </tr>
+                                                                                                                                    <tr>
+                                                                                                                                        <td width="100%" align="center" valign="middle" style="padding-top: 15px;">
+                                                                                                                                            <a href="/" target="_blank" title="Contact Us" aria-label="Contact Us">
+                                                                                                                                                <div class="dark-mode-secondary-text" style="margin: 0px;font-family: Arial, sans-serif;font-size: 18px;mso-line-height-rule:exactly;line-height:150%;color: #B9B9B9;">Contact Us</div>
+                                                                                                                                            </a>
+                                                                                                                                        </td>
+                                                                                                                                    </tr>
+                                                                                                                                </tbody>
+                                                                                                                            </table>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </tbody>
+                                                                                                            </table>
+                                                                                                        </th>
+                                                                                                        <!-- Column : END -->
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!-- QUICK ACTION -->
+
                                                                     <!-- MAINFOOTER: START -->
                                                                     <tr id="MAIN_FOOTER">
                                                                         <td class="dark-mode-footerbackground" width="100%" align="center" valign="middle" bgcolor="#001B2E" style="padding: 20px; background-color: #001B2E">
                                                                             <table role="presentation" cellspacing="0" cellpadding="0" width="100%" border="0" align="center">
                                                                                 <tbody>
-                                                                        
+
                                                                                     <!-- SOCIAL: START -->
                                                                                     <tr id="SOCIAL">
                                                                                         <td width="100%" align="center" valign="middle">
@@ -1205,7 +1245,7 @@
                                                                                     </tr>
                                                                                     <!-- SOCIAL: END -->
 
-                                                                                    <tr><td class="dark-mode-divider" width="100%" align="center" style="padding-bottom: 1px;font-size:1px; background-color: #003253">&nbsp;</td></tr>
+                                                                                    <tr class="LINE"><td class="dark-mode-divider" width="100%" align="center" style="padding-bottom: 1px;font-size:1px; background-color: #003253; line-height: 0;">&nbsp;</td></tr>
 
                                                                                     <!-- DISCLAIMER: START -->
                                                                                     <tr id="DISCLAIMER">
@@ -1246,7 +1286,7 @@
                                                                                     </tr>
                                                                                     <!-- DISCLAIMER: END -->
 
-                                                                                    <tr><td class="dark-mode-divider" width="100%" align="center" style="padding-bottom: 1px;font-size:1px; background-color: #003253">&nbsp;</td></tr>
+                                                                                    <tr class="LINE"><td class="dark-mode-divider" width="100%" align="center" style="padding-bottom: 1px;font-size:1px; background-color: #003253; line-height: 0;">&nbsp;</td></tr>
 
                                                                                     <!-- POLICY LINKS: START -->
                                                                                     <tr id="POLICY_LINKS">
@@ -1260,7 +1300,7 @@
                                                                                     </tr>
                                                                                     <!-- POLICY LINKS: END -->
 
-                                                                                    <tr><td class="dark-mode-divider" width="100%" align="center" style="padding-bottom: 1px;font-size:1px; background-color: #003253">&nbsp;</td></tr>
+                                                                                    <tr class="LINE"><td class="dark-mode-divider" width="100%" align="center" style="padding-bottom: 1px;font-size:1px; background-color: #003253; line-height: 0;">&nbsp;</td></tr>
 
                                                                                     <!-- COPYRIGHTS: START -->
                                                                                     <tr id="COPYRIGHTS">
